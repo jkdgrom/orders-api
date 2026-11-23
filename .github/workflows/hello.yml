@@ -25,3 +25,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Runs only after 'info' finished successfully"
+  
+  windows:
+    needs: info
+    runs-on: windows-latest
+    steps:
+      - run: echo %OS%
